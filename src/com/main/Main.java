@@ -19,7 +19,7 @@ public class Main {
         double y2 = scanner.nextDouble();
 
         // Calculate the length of the line 1
-        double length1 = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        Double length1 = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         System.out.println("The length of the line is: " + length1);
 
         // Input coordinates for the first point of line 2
@@ -35,14 +35,18 @@ public class Main {
         double y4 = scanner.nextDouble();
 
         // Calculate the length of the line 1
-        double length2 = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
+        Double length2 = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
         System.out.println("The length of the line is: " + length2);
 
-        // checking length of two lines
-        if(Double.valueOf(length1).equals(Double.valueOf(length2))){
-            System.out.println("Two lines are equal in length");
-        } else{
-            System.out.println("Two lines are not equal in length");
+        // Compare the two lines using compareTo method
+        int comparison = length1.compareTo(length2);
+
+        if (comparison == 0) {
+            System.out.println("The two lines are equal in length.");
+        } else if (comparison > 0) {
+            System.out.println("The first line is longer than the second line.");
+        } else {
+            System.out.println("The first line is shorter than the second line.");
         }
 
         scanner.close();
