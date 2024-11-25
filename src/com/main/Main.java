@@ -13,9 +13,9 @@ public class Main {
         double y1 = scanner.nextDouble();
 
         // Input coordinates for the second point
-        System.out.println("Enter coordinates of the second point y2: ");
+        System.out.println("Enter coordinates of the second point x2: ");
         double x2 = scanner.nextDouble();
-        System.out.println("Enter coordinates of the second point y1: ");
+        System.out.println("Enter coordinates of the second point y2: ");
         double y2 = scanner.nextDouble();
 
         // Calculate the length of the line
